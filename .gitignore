@@ -87,12 +87,12 @@ app/frontend/dist/
 app/backend/logs/
 *.log
 
-# IDE and editor files
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
+# # IDE and editor files
+# .vscode/
+# .idea/
+# *.swp
+# *.swo
+# *~
 
 # OS generated files
 .DS_Store

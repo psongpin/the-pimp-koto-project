@@ -5,6 +5,7 @@
   "author": "",
   "keywords": [],
   "license": "ISC",
+  "type": "module",
   "scripts": {
     "dev:backend": "pnpm --filter backend dev",
     "dev:frontend": "pnpm --filter frontend dev",
@@ -15,8 +16,10 @@
     "lint": "eslint apps/**/*.{ts,tsx}",
     "format": "prettier --write \"apps/**/*.{ts,tsx,json,md}\"",
     "prepare": "husky",
-    "docker:dev": "docker-compose up",
-    "docker:build": "docker-compose up --build"
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "docker:clean": "docker-compose down -v"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
