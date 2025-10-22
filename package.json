@@ -1,0 +1,26 @@
+{
+  "name": "the-pimp-koto-project",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "keywords": [],
+  "license": "ISC",
+  "scripts": {
+    "dev:backend": "pnpm --filter backend dev",
+    "dev:frontend": "pnpm --filter frontend dev",
+    "dev": "pnpm --parallel --filter \"./apps/*\" dev",
+    "build:backend": "pnpm --filter backend build",
+    "build:frontend": "pnpm --filter frontend build",
+    "build": "pnpm --recursive --filter \"./apps/*\" build",
+    "lint": "eslint apps/**/*.{ts,tsx}",
+    "format": "prettier --write \"apps/**/*.{ts,tsx,json,md}\"",
+    "prepare": "husky",
+    "docker:dev": "docker-compose up",
+    "docker:build": "docker-compose up --build"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "husky": "^9.1.7"
+  }
+}
